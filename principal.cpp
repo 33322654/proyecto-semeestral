@@ -77,6 +77,12 @@ main ()
         }
 	}
   while (op != 6);
-
+{
+	  cout << "Ingresa:\n" << "1)agregar un recurso\n" <<
+		"2)agregar un estudiante\n" << "3)prestar un recurso dispinible\n" <<
+		"4)consultar los prestamos de un estudiante\n" <<
+		"5)consultar la informacion de un prestamo\n" <<
+		"6)devolver un recurso prestado\n" << "7) salir\n" << endl;
+	cin<<swich;
   }
 
