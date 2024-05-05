@@ -1,19 +1,19 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int
 main ()
 {
-  //Central de prestamos implementa un menu
-
-  int op, recurso, id, prestamo, informacion_del_prestamo, recurso_prestado,
-	nuevo_recurso;
-  string estudiante, estudiante1;
+  int op, recurso, id, prestamo, informacion_del_prestamo, recurso_prestado, recurso_numero;
+  string estudiante;
   
   cout << "Bienvenido a la central de prestamos de la Universidad" << endl;
   do
 	{
-	  cout << "Ingresa:\n" << "1)agregar un recurso\n" <<
-		"2)agregar un estudiante\n" << "3)prestar un recurso dispinible\n" <<
+	  cout << "Ingresa:\n" <<
+	    "1)agregar un recurso\n" <<
+		"2)agregar un estudiante\n" << 
+		"3)prestar un recurso dispinible\n" <<
 		"4)consultar los prestamos de un estudiante\n" <<
 		"5)consultar la informacion de un prestamo\n" <<
 		"6)devolver un recurso prestado\n" << "7) salir\n" << endl;
@@ -24,19 +24,20 @@ main ()
 		    case 1:
 		        {
 			      cout << "Agregar un recurso" << endl;
+			      cout<< "ingrese numero del recurso"<<endl;
 			      cin >> recurso;
-			      cout << "Se agrego correctamente" << endl;
+			      cout << "Se agrego correctamente" << recurso << endl;
 		         }break;
 
 		     case 2:
 		          {
 			        cout << "Agregar un estudiante" << endl;
-			        cin>>estudiante;
-		         	cout << "Ingrese el nombre del estudiante: ";
-			        cin >> estudiante1;	// AquC- se debe agregar el cC3digo para agregar el nuevo estudiante a la base de datos cout << "Se agregC3 correctamente el estudiante: " << nuevo estudiante<< endl; }
+		         	cout << "Ingresar id estudiante: "<< endl;
+			        cin >> id;
 		            cout << "Ingresar el codigo del estudiante" << endl;
-	                cin >> id;
-		              
+	                cin >> estudiante;
+	                cout<<"se agrego correctamente el recurso numero" << estudiante << "con id" << id << endl;
+ 
 		          }break;
 	
 
@@ -75,14 +76,13 @@ main ()
                     }break;
   
         }
-	}
-  while (op != 6);
-{
-	  cout << "Ingresa:\n" << "1)agregar un recurso\n" <<
+	}while (op != 7);
+  
+        cout << "Ingresa:\n" << "1)agregar un recurso\n" <<
 		"2)agregar un estudiante\n" << "3)prestar un recurso dispinible\n" <<
 		"4)consultar los prestamos de un estudiante\n" <<
 		"5)consultar la informacion de un prestamo\n" <<
 		"6)devolver un recurso prestado\n" << "7) salir\n" << endl;
-	cin<<swich;
-  }
-
+  return 0;
+  
+}
